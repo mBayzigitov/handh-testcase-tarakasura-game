@@ -1,4 +1,4 @@
-package ru.handh;
+package ru.handh.chars;
 
 import ru.handh.util.GameplayOperations;
 
@@ -42,18 +42,17 @@ public class Creature {
         }
     }
 
-    public boolean attack(Creature target) {
+    public int attack(Creature target) {
         int attackModifier = calculateAttackModifier(this, target);
 
         // if one of the several dice rolls gave 5/6 -> make damage to target of attack ; else -> consider an attack a failure
         if (GameplayOperations.severalDiceRolls(attackModifier)) {
-            target.makeDamage(
-                    GameplayOperations.pickNumberInRange(damageMin, damageMax)
-            );
-            return true;
+            int damageDone = GameplayOperations.pickNumberInRange(damageMin, damageMax);
+            target.makeDamage(damageDone);
+            return damageDone;
         }
 
-        return false;
+        return 0;
     }
 
     protected int calculateAttackModifier(Creature attacker, Creature target) {
