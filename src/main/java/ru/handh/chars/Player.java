@@ -21,17 +21,17 @@ public class Player extends Creature {
         for (Item item: itemList) {
             switch (item.getParameterAffected()) {
                 case ATTACK -> {
-                    setAttack(Math.max(attack + item.getBuffValue(), 1));
+                    setAttack(Math.min(attack + item.getBuffValue(), 30)); // 30 - maximum value of attack param
                 }
                 case BLOCK -> {
-                    setBlock(Math.max(block + item.getBuffValue(), 1));
+                    setBlock(Math.min(block + item.getBuffValue(), 30)); // 30 - maximum value of block param
                 }
                 case MAX_HEALTH -> {
-                    setMaxHealth(Math.max(maxHealth + item.getBuffValue(), 1));
+                    setMaxHealth(maxHealth + item.getBuffValue());
                 }
                 case DAMAGE -> {
-                    setDamageMax(Math.max(damageMax + item.getBuffValue(), 2));
-                    setDamageMin(Math.max(damageMin + item.getBuffValue(), 1));
+                    setDamageMax(damageMax + item.getBuffValue());
+                    setDamageMin(damageMin + item.getBuffValue());
                 }
             }
         }
@@ -61,17 +61,17 @@ public class Player extends Creature {
         for (Item item: items) {
             switch (item.getParameterAffected()) {
                 case ATTACK -> {
-                    setAttack(Math.max(attack + item.getBuffValue(), 1));
+                    setAttack(Math.min(attack + item.getBuffValue(), 30)); // 30 - maximum value of attack param
                 }
                 case BLOCK -> {
-                    setBlock(Math.max(block + item.getBuffValue(), 1));
+                    setBlock(Math.min(block + item.getBuffValue(), 30)); // 30 - maximum value of block param
                 }
                 case MAX_HEALTH -> {
-                    setMaxHealth(Math.max(maxHealth + item.getBuffValue(), 1));
+                    setMaxHealth(maxHealth + item.getBuffValue());
                 }
                 case DAMAGE -> {
-                    setDamageMax(Math.max(damageMax + item.getBuffValue(), 2));
-                    setDamageMin(Math.max(damageMin + item.getBuffValue(), 1));
+                    setDamageMax(damageMax + item.getBuffValue());
+                    setDamageMin(damageMin + item.getBuffValue());
                 }
             }
         }
@@ -82,17 +82,17 @@ public class Player extends Creature {
 
         switch (item.getParameterAffected()) {
             case ATTACK -> {
-                setAttack(Math.max(attack + item.getBuffValue(), 1));
+                setAttack(Math.min(attack + item.getBuffValue(), 30)); // 30 - maximum value of attack param
             }
             case BLOCK -> {
-                setBlock(Math.max(block + item.getBuffValue(), 1));
+                setBlock(Math.min(block + item.getBuffValue(), 30)); // 30 - maximum value of block param
             }
             case MAX_HEALTH -> {
-                setMaxHealth(Math.max(maxHealth + item.getBuffValue(), 1));
+                setMaxHealth(maxHealth + item.getBuffValue());
             }
             case DAMAGE -> {
-                setDamageMax(Math.max(damageMax + item.getBuffValue(), 2));
-                setDamageMin(Math.max(damageMin + item.getBuffValue(), 1));
+                setDamageMax(damageMax + item.getBuffValue());
+                setDamageMin(damageMin + item.getBuffValue());
             }
         }
     }

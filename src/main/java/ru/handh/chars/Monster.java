@@ -1,15 +1,15 @@
 package ru.handh.chars;
 
 public class Monster extends Creature {
-    protected String meetingDescription;
+    protected String meetingPhrase;
 
     public Monster() {}
 
-    public String getMeetingDescription() {
-        return meetingDescription;
+    public String getMeetingPhrase() {
+        return meetingPhrase;
     }
 
-    public void setMeetingDescription(String meetingDescription) {
-        this.meetingDescription = meetingDescription;
+    public void setMeetingPhrase(String meetingPhrase) {
+        this.meetingPhrase = meetingPhrase;
     }
 }

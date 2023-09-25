@@ -1,18 +1,16 @@
 package ru.handh.objects;
 
-import ru.handh.util.EffectType;
 import ru.handh.util.ParameterAffected;
 
 public class Item {
     protected String name;
     protected String description;
     protected ParameterAffected parameterAffected;
-    protected EffectType effectType;
     protected int buffValue;
 
     public Item() {}
 
-    public Item(String name, String description, ParameterAffected parameterAffected, EffectType effectType, int buffValue) {
+    public Item(String name, String description, ParameterAffected parameterAffected, int buffValue) {
         if (name == null) {
             throw new IllegalArgumentException("Name must be not null");
         } else {
@@ -31,13 +29,11 @@ public class Item {
             this.parameterAffected = parameterAffected;
         }
 
-        if (effectType == null) {
-            throw new IllegalArgumentException("Effect type must be not null");
+        if (buffValue <= 0) {
+            throw new IllegalArgumentException("Buff value must be above zero");
         } else {
-            this.effectType = effectType;
+            this.buffValue = buffValue;
         }
-
-        this.buffValue = buffValue;
     }
 
     public String getDescription() {
@@ -49,18 +45,6 @@ public class Item {
             throw new IllegalArgumentException("Description must be not null");
         } else {
             this.description = description;
-        }
-    }
-
-    public EffectType getEffectType() {
-        return effectType;
-    }
-
-    public void setEffectType(EffectType effectType) {
-        if (effectType == null) {
-            throw new IllegalArgumentException("Effect type must be not null");
-        } else {
-            this.effectType = effectType;
         }
     }
 

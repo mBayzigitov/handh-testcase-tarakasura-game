@@ -1,6 +1,5 @@
 package ru.handh.util;
 
-// is it necessary ?
 public class GameplayOperations {
     // method for dice rolling & damage value selection
     public static int pickNumberInRange(int min, int max) {
