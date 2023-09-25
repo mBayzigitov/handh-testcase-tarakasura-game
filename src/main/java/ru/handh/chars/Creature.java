@@ -109,6 +109,8 @@ public class Creature {
     public void setHealth(int health) {
         if (health < 0) { // set 0 -> death of creature
             throw new IllegalArgumentException("The creature must have initial health more than 0");
+        } else if (health > maxHealth) {
+            this.health = maxHealth;
         } else {
             this.health = health;
         }
@@ -116,6 +118,14 @@ public class Creature {
 
     public int getMaxHealth() {
         return maxHealth;
+    }
+
+    public void setMaxHealth(int maxHealth) {
+        if (maxHealth <= 0) {
+            throw new IllegalArgumentException("Max health must be a positive number");
+        } else {
+            this.maxHealth = maxHealth;
+        }
     }
 
     public void makeDamage(int damageRecieved) {

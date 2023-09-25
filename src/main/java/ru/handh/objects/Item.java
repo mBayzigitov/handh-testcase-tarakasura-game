@@ -1,16 +1,17 @@
 package ru.handh.objects;
 
+import ru.handh.util.EffectType;
 import ru.handh.util.ParameterAffected;
 
 public class Item {
     protected String description;
     protected ParameterAffected parameterAffected;
-    protected ParameterAffected buffType;
+    protected EffectType effectType;
     protected int buffValue;
 
     public Item() {}
 
-    public Item(String description, ParameterAffected parameterAffected, ParameterAffected buffType, int buffValue) {
+    public Item(String description, ParameterAffected parameterAffected, EffectType effectType, int buffValue) {
         if (description == null) {
             throw new IllegalArgumentException("Description must be not null");
         } else {
@@ -23,10 +24,10 @@ public class Item {
             this.parameterAffected = parameterAffected;
         }
 
-        if (buffType == null) {
-            throw new IllegalArgumentException("Buff type must be not null");
+        if (effectType == null) {
+            throw new IllegalArgumentException("Effect type must be not null");
         } else {
-            this.buffType = buffType;
+            this.effectType = effectType;
         }
 
         this.buffValue = buffValue;
@@ -44,15 +45,15 @@ public class Item {
         }
     }
 
-    public ParameterAffected getBuffType() {
-        return buffType;
+    public EffectType getEffectType() {
+        return effectType;
     }
 
-    public void setBuffType(ParameterAffected buffType) {
-        if (buffType == null) {
-            throw new IllegalArgumentException("Buff type must be not null");
+    public void setEffectType(EffectType effectType) {
+        if (effectType == null) {
+            throw new IllegalArgumentException("Effect type must be not null");
         } else {
-            this.buffType = buffType;
+            this.effectType = effectType;
         }
     }
 

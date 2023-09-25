@@ -7,6 +7,6 @@ import ru.handh.objects.Item;
 public class Main {
     public static void main(String[] args) {
         // logic here
-        Item item = new Item(null, null, null, 1);
+
     }
 }
