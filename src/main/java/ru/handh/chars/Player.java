@@ -1,6 +1,7 @@
 package ru.handh.chars;
 
 import ru.handh.objects.Item;
+import ru.handh.util.ParameterAffected;
 
 public class Player extends Creature {
     protected int healLeft = 4;
@@ -26,6 +27,23 @@ public class Player extends Creature {
             }
 
             healLeft--;
+        }
+    }
+
+    public Item getItem() {
+        return item;
+    }
+
+    public void setItem(Item item) {
+        if (this.item == null) {
+            this.item = item;
+
+            switch (item.getParameterAffected()) {
+                case ATTACK -> {
+                    // todo
+                }
+            }
+
         }
     }
 
