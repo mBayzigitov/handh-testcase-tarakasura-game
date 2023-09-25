@@ -7,11 +7,12 @@ public class Creature {
     protected int attack;
     protected int block;
     protected int health;
+    protected int maxHealth;
     protected int damageMin, damageMax;
 
     public Creature() {}
 
-    public Creature(String name, int attack, int block, int health, int damageMin, int damageMax) {
+    public Creature(String name, int attack, int block, int maxHealth, int damageMin, int damageMax) {
         this.name = name;
 
         if (attack < 1 || attack > 30) {
@@ -26,10 +27,11 @@ public class Creature {
             this.block = block;
         }
 
-        if (health < 1) {
+        if (maxHealth < 1) {
             throw new IllegalArgumentException("The creature must have initial health more than 0");
         } else {
-            this.health = health;
+            this.health = maxHealth;
+            this.maxHealth = maxHealth;
         }
 
         if (damageMax < damageMin || damageMin < 0) {
@@ -102,6 +104,10 @@ public class Creature {
         } else {
             this.health = health;
         }
+    }
+
+    public int getMaxHealth() {
+        return maxHealth;
     }
 
     public void makeDamage(int damageRecieved) {
