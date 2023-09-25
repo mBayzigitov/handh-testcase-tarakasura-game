@@ -13,7 +13,11 @@ public class Creature {
     public Creature() {}
 
     public Creature(String name, int attack, int block, int maxHealth, int damageMin, int damageMax) {
-        this.name = name;
+        if (name == null) {
+            throw new IllegalArgumentException("Name must be not null");
+        } else {
+            this.name = name;
+        }
 
         if (attack < 1 || attack > 30) {
             throw new IllegalArgumentException("The attack parameter must be in the [1,30] range");
@@ -67,7 +71,11 @@ public class Creature {
     }
 
     public void setName(String name) {
-        this.name = name;
+        if (name == null) {
+            throw new IllegalArgumentException("Name must be not null");
+        } else {
+            this.name = name;
+        }
     }
 
     public int getAttack() {
