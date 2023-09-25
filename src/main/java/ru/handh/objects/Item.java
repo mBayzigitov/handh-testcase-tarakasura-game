@@ -4,6 +4,7 @@ import ru.handh.util.EffectType;
 import ru.handh.util.ParameterAffected;
 
 public class Item {
+    protected String name;
     protected String description;
     protected ParameterAffected parameterAffected;
     protected EffectType effectType;
@@ -11,7 +12,13 @@ public class Item {
 
     public Item() {}
 
-    public Item(String description, ParameterAffected parameterAffected, EffectType effectType, int buffValue) {
+    public Item(String name, String description, ParameterAffected parameterAffected, EffectType effectType, int buffValue) {
+        if (name == null) {
+            throw new IllegalArgumentException("Name must be not null");
+        } else {
+            this.name = name;
+        }
+
         if (description == null) {
             throw new IllegalArgumentException("Description must be not null");
         } else {
@@ -75,5 +82,22 @@ public class Item {
 
     public void setBuffValue(int buffValue) {
         this.buffValue = buffValue;
+    }
+
+    public String getName() {
+        return name;
+    }
+
+    public void setName(String name) {
+        if (name == null) {
+            throw new IllegalArgumentException("Name must be not null");
+        } else {
+            this.name = name;
+        }
+    }
+
+    @Override
+    public String toString() {
+        return name;
     }
 }
