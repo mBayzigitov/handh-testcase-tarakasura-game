@@ -82,6 +82,25 @@ public class Item {
 
     @Override
     public String toString() {
-        return name;
+        StringBuilder output = new StringBuilder(name);
+        output.append(" (+").append(buffValue).append(" к ");
+
+        switch (parameterAffected) {
+            case ATTACK -> {
+                output.append("атаке");
+            }
+            case BLOCK -> {
+                output.append("защите");
+            }
+            case DAMAGE -> {
+                output.append("урону");
+            }
+            case MAX_HEALTH -> {
+                output.append("максимальному здоровью");
+            }
+        }
+        output.append(")");
+
+        return output.toString();
     }
 }

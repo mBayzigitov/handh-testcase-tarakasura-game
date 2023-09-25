@@ -37,6 +37,10 @@ public class Player extends Creature {
         }
     }
 
+    public int getHealLeft() {
+        return healLeft;
+    }
+
     public int heal() {
         int heal = 0;
         if (!this.isDead()) {
@@ -103,15 +107,11 @@ public class Player extends Creature {
 
     @Override
     public String toString() {
-        return "Player{" +
-                "item=" + items +
-                ", name='" + name + '\'' +
-                ", attack=" + attack +
-                ", block=" + block +
-                ", health=" + health +
-                ", maxHealth=" + maxHealth +
-                ", damageMin=" + damageMin +
-                ", damageMax=" + damageMax +
-                '}';
+        return name +
+                "\n\tАтака: " + attack + ". " +
+                "Защита: " + block + ". " +
+                "Здоровье: " + maxHealth + ". " +
+                "Урон: " + damageMin + "-" + damageMax + ".\n" +
+                "\tПредметы: " + items.toString();
     }
 }

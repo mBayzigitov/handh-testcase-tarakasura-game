@@ -48,7 +48,7 @@ public class Creature {
         }
     }
 
-    public int attack(Creature target) {
+    public int attack(Creature target) throws InterruptedException {
         int attackModifier = calculateAttackModifier(this, target);
 
         // if one of the several dice rolls gave 5/6 -> make damage to target of attack ; else -> consider an attack a failure
