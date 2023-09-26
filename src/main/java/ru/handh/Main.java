@@ -14,7 +14,6 @@ public class Main {
 
         /*
         todo:
-            3) ascii arts into string constants
             4) readme.md
          */
 
