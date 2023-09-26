@@ -1,12 +1,13 @@
 package ru.handh.util;
 
+import java.util.concurrent.ThreadLocalRandom;
+
 public class GameplayOperations {
     // method for dice rolling & damage value selection
     public static int pickNumberInRange(int min, int max) {
-        return (int) ((Math.random() * (max - min)) + min);
+        return ThreadLocalRandom.current().nextInt(min, max + 1);
     }
 
-    // todo console output for dice rolling
     public static boolean severalDiceRolls(int numberOfRolls) throws InterruptedException {
         System.out.println("\tКубик будет брошен " + numberOfRolls + " раз.");
         for (int i = 0; i < numberOfRolls; i++) {
