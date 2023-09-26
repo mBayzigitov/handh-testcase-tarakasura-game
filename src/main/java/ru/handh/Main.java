@@ -14,7 +14,6 @@ public class Main {
 
         /*
         todo:
-            2) heal command fix
             3) ascii arts into string constants
             4) readme.md
          */

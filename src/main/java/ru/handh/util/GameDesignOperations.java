@@ -433,7 +433,7 @@ public class GameDesignOperations {
             if (Main.current_hero.isHealingAvailable()) {
                 String input = "heal";
                 System.out.println("[!] Здоровье игрока: [" + Main.current_hero.getHealth() + "/" + Main.current_hero.getMaxHealth() + "].\n");
-                while (input.equalsIgnoreCase("heal") && Main.current_hero.isHealingAvailable()) {
+                while (!input.equalsIgnoreCase("") && Main.current_hero.isHealingAvailable()) {
                     System.out.println("\tВведите \"heal\", чтобы применить лечебное зелье или нажмите \"ENTER\", чтобы продолжить. Осталось зелий: " + Main.current_hero.getHealLeft());
                     System.out.print("-> ");
                     input = Main.scanner.nextLine();
