@@ -13,7 +13,8 @@ tg: @yourpaink1ller
 # Предупреждение
 В игре боссы представлены с помощь ASCII-изображений. Для корректного отображения в консоли должен быть использован шрифт фиксированной ширины.
 Таким образом, символы не будут смещены, и будет видна задуманная картинка. Например, вот так выглядит в идеале один из монстров.
-<p align="center"><img src="https://github.com/mBayzigitov/handh-testcase-tarakasura-game/assets/91501162/a1fca2c7-a92a-49e1-b8fc-7c280220310c" width="550"></p>
+<p align="center"><img src="https://github.com/mBayzigitov/handh-testcase-tarakasura-game/assets/91501162/7624ff4f-3a54-4e0b-9288-6eec11d4ad7e" width="550"></p>
+
 
 # Для локального запуска:
 
