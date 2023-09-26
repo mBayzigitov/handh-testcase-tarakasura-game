@@ -35,7 +35,7 @@ public class Main {
                 "Этот медальон обещает тебе верность и помощь в самый тяжелый час.",
                 ParameterAffected.ATTACK, 3);
         Item seal_of_chaos = new Item("Печать Хаоса", "Она сияет мрачными силами, готовыми развязать апокалипсис. " +
-                "Её сила – твоя власть, но будь осторожен, она может стать и твоим проклятием.",
+                "Её сила - твоя власть, но будь осторожен, она может стать и твоим проклятием.",
                 ParameterAffected.MAX_HEALTH, 5);
         Item ferogs_staff = new Item("Посох Ферога", "Древний посох, который словно изгибается под твоей волей. Его конец сверкает магическими символами, готовыми исполнить любую твою команду.",
                 ParameterAffected.DAMAGE, 4);
@@ -66,18 +66,18 @@ public class Main {
         // <------------------------------------>
 
         // <--- Creation of gameplay characters --->
-        Player hero_1 = new Player("Картикея", 10, 15, 30, 6, 8);
+        Player hero_1 = new Player("Картикея", 11, 15, 29, 4, 8);
         hero_1.addItem(club);
 
-        Player hero_2 = new Player("Ганеша", 14, 10, 24, 10, 12);
+        Player hero_2 = new Player("Ганеша", 16, 11, 24, 8, 12);
         hero_2.addItem(cape);
 
-        Player hero_3 = new Player("Сканда", 11, 11, 26, 8, 12);
+        Player hero_3 = new Player("Сканда", 13, 13, 26, 7, 11);
         hero_3.addItem(dagger);
         List<Player> heroes = new ArrayList<>(List.of(hero_1, hero_2, hero_3));
 
-        Monster molo = new Monster("Моло", 12, 4, 17, 5, 7,
-                "Ты пришел, как баран на кладбище, не зная, что здесь – твой последний покой.");
+        Monster molo = new Monster("Моло", 13, 5, 14, 4, 6,
+                "Ты пришел, как баран на кладбище, не зная, что здесь - твой последний покой.");
         String art = "             \\                  /\n" +
                 "           _________))                ((__________\n" +
                 "          /.-------./\\\\    \\    /    //\\.--------.\\\n" +
@@ -98,7 +98,7 @@ public class Main {
                 "                             (\n";
         molo.setAsciiArt(art);
 
-        Monster alastor = new Monster("Аластор", 13, 3, 16, 4, 6,
+        Monster alastor = new Monster("Аластор", 13, 4, 13, 5, 7,
                 "Скоро твоя душа будет моей, а ты станешь частью тьмы, которую не пережить.");
         art =   "             ,/         \\.\n" +
                 "            ((           ))\n" +
@@ -120,7 +120,7 @@ public class Main {
                 "                 `-.-'\n";
         alastor.setAsciiArt(art);
 
-        Monster xafan = new Monster("Ксафан", 10, 3, 15, 6, 8,
+        Monster xafan = new Monster("Ксафан", 10, 3, 18, 3, 8,
                 "Ты думал, что можешь сопротивляться нам? Ты лишь капля в океане боли, которую мы принесем.");
         art =   "                   ,-----.\n" +
                 "                  ( <> <> )\n" +
@@ -146,35 +146,35 @@ public class Main {
 
         List<Monster> level_1_monsters = new ArrayList<>(List.of(molo, alastor, xafan));
 
-        Monster sabnac = new Monster("Сабнак", 15, 9, 21, 8, 9,
-                "Твой страх – наш праздник, твоя мука – наша песня. Подготовься к пиршеству.");
+        Monster sabnac = new Monster("Сабнак", 14, 5, 22, 5, 8,
+                "Твой страх - наш праздник, твоя мука - наша песня. Подготовься к пиршеству.");
         art = "             =*===\n" +
-                "           $$- - $$$\n" +
-                "           $ <    D$$\n" +
-                "           $ -   $$$\n" +
-                "     ,     $$$$  |\n" +
-                "    ///; ,---' _ |----.\n" +
-                "     \\ )(           /  )\n" +
-                "     | \\/ \\.   '  _.|  \\              $\n" +
-                "     |  \\ /(   /    /\\_ \\          $$$$$\n" +
-                "      \\ /  (       / /  )         $$$ $$$\n" +
-                "           (  ,   /_/ ,`_,-----.,$$  $$$\n" +
-                "           |   <----|  \\---##     \\   $$\n" +
-                "           /         \\\\\\           |    $\n" +
-                "          '   '                    |\n" +
-                "          |                 \\      /\n" +
-                "          /  \\_|    /______,/     /\n" +
-                "         /   / |   /    |   |    /\n" +
-                "        (   /--|  /.     \\  (\\  (_\n" +
-                "         `----,( ( _\\     \\ / / ,/\n" +
-                "               | /        /,_/,/\n" +
-                "              _|/        / / (\n" +
-                "             / (        ^-/, |\n" +
-                "            /, |          ^-    b'ger\n" +
-                "            ^-\n";
+                "                        $$- - $$$\n" +
+                "                        $ <    D$$\n" +
+                "                        $ -   $$$\n" +
+                "                  ,     $$$$  |\n" +
+                "                 ///; ,---' _ |----.\n" +
+                "                  \\ )(           /  )\n" +
+                "                  | \\/ \\.   '  _.|  \\              $\n" +
+                "                  |  \\ /(   /    /\\_ \\          $$$$$\n" +
+                "                   \\ /  (       / /  )         $$$ $$$\n" +
+                "                        (  ,   /_/ ,`_,-----.,$$  $$$\n" +
+                "                        |   <----|  \\---##     \\   $$\n" +
+                "                        /         \\\\\\           |    $\n" +
+                "                       '   '                    |\n" +
+                "                       |                 \\      /\n" +
+                "                       /  \\_|    /______,/     /\n" +
+                "                      /   / |   /    |   |    /\n" +
+                "                     (   /--|  /.     \\  (\\  (_\n" +
+                "                      `----,( ( _\\     \\ / / ,/\n" +
+                "                            | /        /,_/,/\n" +
+                "                           _|/        / / (\n" +
+                "                          / (        ^-/, |\n" +
+                "                         /, |          ^-   \n" +
+                "                         ^-\n";
         sabnac.setAsciiArt(art);
 
-        Monster serra = new Monster("Серра", 17, 12, 24, 8, 12,
+        Monster serra = new Monster("Серра", 13, 6, 21, 6, 8,
                 "Твои надежды призрачны, а горесть - ничтожна. Насладись своим последним моментом.");
         art =   "                              /       /\n" +
                 "                           .'<_.-._.'<\n" +
@@ -193,7 +193,7 @@ public class Main {
                 "               \\\\          |    .      |//  \n";
         serra.setAsciiArt(art);
 
-        Monster habaril = new Monster("Хабарил", 13, 15, 22, 9, 13,
+        Monster habaril = new Monster("Хабарил", 12, 7, 24, 4, 10,
                 "Мы не боимся света, потому что в нем тоже есть тьма. И ты - наш следующий шедевр.");
         art =   "                *                       *\n" +
                 "                   *                 *\n" +
@@ -214,15 +214,15 @@ public class Main {
                 "                /_)      #,;    ))\n" +
                 "                        //      \\|_\n" +
                 "                        \\|_      |#\\\n" +
-                "                         |#\\      -\"  b'ger\n" +
+                "                         |#\\      -\" \n" +
                 "                          -\"\n";
         habaril.setAsciiArt(art);
 
         List<Monster> level_2_monsters = new ArrayList<>(List.of(sabnac, serra, habaril));
 
 
-        Monster leviafan = new Monster("Левиафан", 18, 17, 23, 8, 14,
-                "Твоя жизнь – всего лишь мгновение вечности. Ты угаснешь, но это ничего не изменит.");
+        Monster leviafan = new Monster("Левиафан", 17, 9, 27, 8, 11,
+                "Твоя жизнь - всего лишь мгновение вечности. Ты угаснешь, но это ничего не изменит.");
         art = "                                                 __----~~~~~~~~~~~------___\n" +
                 "                                      .  .   ~~//====......          __--~ ~~\n" +
                 "                      -.            \\_|//     |||\\\\  ~~~~~~::::... /~\n" +
@@ -243,7 +243,7 @@ public class Main {
                 "                                         //.-~~~--\\\n";
         leviafan.setAsciiArt(art);
 
-        Monster citry = new Monster("Ситри", 16, 18, 26, 3, 12,
+        Monster citry = new Monster("Ситри", 16, 8, 26, 3, 14,
                 "Твоя судьба уже была записана в наших книгах. Сегодня мы просто закроем эту главу.");
         art = "                   (    )\n" +
                 "                  ((((()))\n" +
@@ -270,29 +270,29 @@ public class Main {
                 "                        /,/,\"\n";
         citry.setAsciiArt(art);
 
-        Monster sartaganas = new Monster("Сартаганас", 14, 21, 22, 6, 13,
+        Monster sartaganas = new Monster("Сартаганас", 14, 12, 28, 6, 12,
                 "Ты глупец, если решил, что действительно способен меня одолеть.");
-        art = "   .:'                                  `:.\n" +
-                "  ::'                                    `::\n" +
-                " :: :.                                  .: ::\n" +
-                "  `:. `:.             .             .:'  .:'\n" +
-                "   `::. `::           !           ::' .::'\n" +
-                "       `::.`::.    .' ! `.    .::'.::'\n" +
-                "         `:.  `::::'':!:``::::'   ::'\n" +
-                "         :'*:::.  .:' ! `:.  .:::*`:\n" +
-                "        :: HHH::.   ` ! '   .::HHH ::\n" +
-                "       ::: `H TH::.  `!'  .::HT H' :::\n" +
-                "       ::..  `THHH:`:   :':HHHT'  ..::\n" +
-                "       `::      `T: `. .' :T'      ::'\n" +
-                "         `:. .   :         :   . .:'\n" +
-                "           `::'               `::'\n" +
-                "             :'  .`.  .  .'.  `:\n" +
-                "             :' ::.       .:: `:\n" +
-                "             :' `:::     :::' `:\n" +
-                "              `.  ``     ''  .'\n" +
-                "               :`...........':\n" +
-                "               ` :`.     .': '\n" +
-                "                `:  `\"\"\"'  :";
+        art =   "              .:'                                  `:.\n" +
+                "             ::'                                    `::\n" +
+                "            :: :.                                  .: ::\n" +
+                "             `:. `:.             .             .:'  .:'\n" +
+                "              `::. `::           !           ::' .::'\n" +
+                "                  `::.`::.    .' ! `.    .::'.::'\n" +
+                "                    `:.  `::::'':!:``::::'   ::'\n" +
+                "                    :'*:::.  .:' ! `:.  .:::*`:\n" +
+                "                   :: HHH::.   ` ! '   .::HHH ::\n" +
+                "                  ::: `H TH::.  `!'  .::HT H' :::\n" +
+                "                  ::..  `THHH:`:   :':HHHT'  ..::\n" +
+                "                  `::      `T: `. .' :T'      ::'\n" +
+                "                    `:. .   :         :   . .:'\n" +
+                "                      `::'               `::'\n" +
+                "                        :'  .`.  .  .'.  `:\n" +
+                "                        :' ::.       .:: `:\n" +
+                "                        :' `:::     :::' `:\n" +
+                "                         `.  ``     ''  .'\n" +
+                "                          :`...........':\n" +
+                "                          ` :`.     .': '\n" +
+                "                           `:  `\"\"\"'  :";
         sartaganas.setAsciiArt(art);
 
         List<Monster> level_3_monsters = new ArrayList<>(List.of(leviafan, citry, sartaganas));
@@ -444,13 +444,14 @@ public class Main {
 
             if (current_hero.isHealingAvailable()) {
                 String input = "heal";
+                System.out.println("[!] Здоровье игрока: [" + current_hero.getHealth() + "/" + current_hero.getMaxHealth() + "].\n");
                 while (input.equalsIgnoreCase("heal") && current_hero.isHealingAvailable()) {
-                    System.out.println("[!] Здоровье игрока: [" + current_hero.getHealth() + "/" + current_hero.getMaxHealth() + "].\n" +
-                            "\tВведите \"heal\", чтобы применить лечебное зелье или нажмите \"ENTER\", чтобы продолжить. Осталось зелий: " + current_hero.getHealLeft());
+                    System.out.println("\tВведите \"heal\", чтобы применить лечебное зелье или нажмите \"ENTER\", чтобы продолжить. Осталось зелий: " + current_hero.getHealLeft());
                     System.out.print("-> ");
                     input = scanner.nextLine();
                     if (input.equalsIgnoreCase("heal")) {
                         current_hero.heal();
+                        System.out.println("\t[!] Здоровье восстановлено, текущее здоровье: [" + current_hero.getHealth() + "/" + current_hero.getMaxHealth() + "].\n");
                     }
                 }
             }
@@ -525,10 +526,10 @@ public class Main {
     }
 
     public static boolean mainBossFight() throws InterruptedException {
-        Monster tarakasura = new Monster("Таракасура", 25, 20, 30, 9, 20,
+        Monster tarakasura = new Monster("Таракасура", 21, 16, 38, 8, 15,
                 "С нашей последней встречи прошло много времени, " + current_hero.getName() + ".\n" +
                         "\tЯ думаю, ты недооцениваешь свою ничтожность по сравнению со мной. Я - смерть,\n" +
-                        "разрушитель миров. Подходи, я превращу в руины и твой!");
+                        "\tразрушитель миров. Подходи - и я превращу в руины и твой!");
         String art = "                               _\n" +
                 "                            ==(W{==========-      /===-\n" +
                 "                              ||  (.--.)         /===-_---~~~~~~~~~------____\n" +
@@ -598,13 +599,14 @@ public class Main {
 
             if (current_hero.isHealingAvailable()) {
                 String input = "heal";
+                System.out.println("[!] Здоровье игрока: [" + current_hero.getHealth() + "/" + current_hero.getMaxHealth() + "].\n");
                 while (input.equalsIgnoreCase("heal") && current_hero.isHealingAvailable()) {
-                    System.out.println("[!] Здоровье игрока: [" + current_hero.getHealth() + "/" + current_hero.getMaxHealth() + "].\n" +
-                            "\tВведите \"heal\", чтобы применить лечебное зелье или нажмите \"ENTER\", чтобы продолжить. Осталось зелий: " + current_hero.getHealLeft());
+                    System.out.println("\t[!] Введите \"heal\", чтобы применить лечебное зелье или нажмите \"ENTER\", чтобы продолжить. Осталось зелий: " + current_hero.getHealLeft());
                     System.out.print("-> ");
                     input = scanner.nextLine();
                     if (input.equalsIgnoreCase("heal")) {
                         current_hero.heal();
+                        System.out.println("\t[!] Здоровье восстановлено, текущее здоровье: [" + current_hero.getHealth() + "/" + current_hero.getMaxHealth() + "].\n");
                     }
                 }
             }
