@@ -11,12 +11,7 @@ public class Main {
     public static final Scanner scanner = new Scanner(System.in);
     public static Player current_hero;
     public static void main(String[] args) throws InterruptedException {
-
-        /*
-        todo:
-            4) readme.md
-         */
-
+        
         ////////////////// MAIN LOGIC OF THE GAME ///////////////////
         printLogo();
 
