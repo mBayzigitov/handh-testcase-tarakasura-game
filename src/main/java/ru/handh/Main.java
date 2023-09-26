@@ -14,13 +14,15 @@ public class Main {
 
         /*
         todo:
-            1) initial rules of the game
             2) heal command fix
             3) ascii arts into string constants
+            4) readme.md
          */
 
         ////////////////// MAIN LOGIC OF THE GAME ///////////////////
         printLogo();
+
+        printRules();
 
         System.out.println("[!] Выберите персонажа");
         List<Player> heroes = getInitialHeroes();
