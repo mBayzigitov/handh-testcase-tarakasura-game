@@ -12,6 +12,13 @@ public class Main {
     public static Player current_hero;
     public static void main(String[] args) throws InterruptedException {
 
+        /*
+        todo:
+            1) initial rules of the game
+            2) heal command fix
+            3) ascii arts into string constants
+         */
+
         ////////////////// MAIN LOGIC OF THE GAME ///////////////////
         printLogo();
 
