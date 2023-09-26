@@ -272,7 +272,7 @@ public class GameDesignOperations {
     }
 
     public static boolean mainBossFight() throws InterruptedException {
-        Monster tarakasura = new Monster("Таракасура", 19, 13, 1, 8, 14,
+        Monster tarakasura = new Monster("Таракасура", 19, 13, 35, 8, 14,
                 "С нашей последней встречи прошло много времени, " + Main.current_hero.getName() + ".\n" +
                         "\tЯ думаю, ты недооцениваешь свою ничтожность по сравнению со мной. Я - сама смерть,\n" +
                         "\tразрушитель миров. Подходи - и я превращу в руины и твой!");

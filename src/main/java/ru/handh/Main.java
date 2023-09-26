@@ -1,5 +1,10 @@
 package ru.handh;
 
+/*
+    @author: mBayzigitov
+    @tg: yourpaink1ller
+ */
+
 import ru.handh.chars.Player;
 
 import java.util.List;
