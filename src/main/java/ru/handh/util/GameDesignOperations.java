@@ -17,7 +17,12 @@ public class GameDesignOperations {
     public static void printSlowPhrase(String curString, int millis) throws InterruptedException {
         for (int i = 0; i < curString.length(); i++) {
             System.out.print(curString.charAt(i));
-            Thread.sleep(millis);
+
+            try {
+                Thread.sleep(millis);
+            } catch (InterruptedException intexc) {
+                intexc.printStackTrace();
+            }
         }
         System.out.println("");
     }

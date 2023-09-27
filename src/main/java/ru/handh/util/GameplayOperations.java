@@ -20,7 +20,12 @@ public class GameplayOperations {
             } else {
                 System.out.println("Атака не удалась!");
             }
-            Thread.sleep(1000);
+
+            try {
+                Thread.sleep(1000);
+            } catch (InterruptedException intexc) {
+                intexc.printStackTrace();
+            }
         }
 
         return false;
